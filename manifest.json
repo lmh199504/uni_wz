@@ -1,0 +1,125 @@
+{
+    "name" : "wz",
+    "appid" : "__UNI__ABA8ED7",
+    "description" : "",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    "app-plus" : {
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "modules" : {},
+        "distribute" : {
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            "ios" : {},
+            "sdkConfigs" : {
+                "ad" : {}
+            },
+            "splashscreen" : {
+                "android" : {
+                    "hdpi" : "static/fen.png",
+                    "xhdpi" : "static/fen.png",
+                    "xxhdpi" : "static/fen.png"
+                },
+                "ios" : {
+                    "iphone" : {
+                        "portrait-896h@3x" : "static/fen.png",
+                        "landscape-896h@3x" : "static/fen.png",
+                        "portrait-896h@2x" : "static/fen.png",
+                        "landscape-896h@2x" : "static/fen.png",
+                        "iphonex" : "static/fen.png",
+                        "iphonexl" : "static/fen.png",
+                        "retina55" : "static/fen.png",
+                        "retina55l" : "static/fen.png",
+                        "retina47" : "static/fen.png",
+                        "retina47l" : "static/fen.png",
+                        "retina40" : "static/fen.png",
+                        "retina40l" : "static/fen.png",
+                        "retina35" : "static/fen.png"
+                    },
+                    "ipad" : {
+                        "portrait-1366h@2x" : "static/fen.png",
+                        "landscape-1366h@2x" : "static/fen.png",
+                        "portrait-1194h@2" : "static/fen.png",
+                        "portrait-1112h@2x" : "static/fen.png",
+                        "landscape-1194h@2x" : "static/fen.png",
+                        "landscape-1112h@2x" : "static/fen.png",
+                        "portrait-retina7" : "static/fen.png",
+                        "landscape-retina7" : "static/fen.png",
+                        "portrait7" : "static/fen.png",
+                        "landscape7" : "static/fen.png"
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "static/images/tabbar/video.png",
+                    "xhdpi" : "static/images/tabbar/video.png",
+                    "xxhdpi" : "static/images/tabbar/video.png",
+                    "xxxhdpi" : "static/images/tabbar/video.png"
+                },
+                "ios" : {
+                    "appstore" : "static/images/tabbar/video.png",
+                    "iphone" : {
+                        "app@2x" : "static/images/tabbar/video.png",
+                        "app@3x" : "static/images/tabbar/video.png",
+                        "spotlight@2x" : "static/images/tabbar/video.png",
+                        "spotlight@3x" : "static/images/tabbar/video.png",
+                        "settings@2x" : "static/images/tabbar/video.png",
+                        "settings@3x" : "static/images/tabbar/video.png",
+                        "notification@2x" : "static/images/tabbar/video.png",
+                        "notification@3x" : "static/images/tabbar/video.png"
+                    },
+                    "ipad" : {
+                        "app" : "static/images/tabbar/video.png",
+                        "app@2x" : "static/images/tabbar/video.png",
+                        "proapp@2x" : "static/images/tabbar/video.png",
+                        "spotlight" : "static/images/tabbar/video.png",
+                        "spotlight@2x" : "static/images/tabbar/video.png",
+                        "settings" : "static/images/tabbar/video.png",
+                        "settings@2x" : "static/images/tabbar/video.png",
+                        "notification" : "static/images/tabbar/video.png",
+                        "notification@2x" : "static/images/tabbar/video.png"
+                    }
+                }
+            }
+        },
+        "splashscreen" : {
+            "waiting" : false,
+            "delay" : 3000,
+            "autoclose" : true
+        }
+    },
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : true
+        }
+    }
+}

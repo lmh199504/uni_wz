@@ -1,0 +1,130 @@
+<template>
+	<view class="container">
+		<myheader></myheader>
+		<view class="content">
+			<view class="nav">
+				<view class="nav_item" :class="{'active':index == 0}" @click="index = 0">推荐</view>
+				<view class="nav_item" :class="{'active':index == 1}" @click="index = 1">健康</view>
+				<view class="nav_item" :class="{'active':index == 2}" @click="index = 2">养生</view>
+				<view class="nav_item" :class="{'active':index == 3}" @click="index = 3">音乐</view>
+			</view>
+			
+			<view class="">
+				<swiper :indicator-dots="false" :autoplay="false" :interval="3000" :duration="500" @change="swiperChange" :current="index" class="swiper_group" style="height: calc(100vh - 470rpx);">
+					<swiper-item class="swiper-item2">
+						<suggest :height="scrollHeight"></suggest>
+					</swiper-item>
+					<swiper-item>
+						<suggest></suggest>
+					</swiper-item>
+					<swiper-item>
+						<suggest></suggest>
+					</swiper-item>
+					<swiper-item>
+						<suggest></suggest>
+					</swiper-item>
+				</swiper>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	
+	import suggest from '../../components/suggest/suggest.nvue'
+	import myheader from '../../components/myheader/myheader.vue'
+	import {
+	    mapGetters
+		
+	} from 'vuex'
+	import mycircle from '@/components/mycircle/mycircle.vue'
+	export default {
+		data() {
+			return {
+				index:0,
+				scrollHeight:150
+			}
+		},
+		onLoad() {
+			this.inter = setInterval(()=>{
+				this.$store.commit('setProgress',1)
+			},500)
+		},
+		onHide() {
+			clearInterval(this.inter)
+		},
+		onUnload(){
+			
+			clearInterval(this.inter)
+		},
+		mounted() {
+		    let info = uni.createSelectorQuery().in(this).select('.swiper_group').boundingClientRect()
+		    info.exec(res => {
+		        this.scrollHeight = res[0].height
+		    })
+		},
+
+		methods: {
+			swiperChange(e){
+				console.log(e)
+				this.index = e.detail.current
+			},
+			getHeight(element){
+				let height = 0
+				let el = uni.createSelectorQuery().in(this).select(element).boundingClientRect()
+				el.exec(res => {
+					height = res[0].height
+				})
+				return height
+			}
+		},
+		computed:{
+			...mapGetters(['progress'])
+		},
+		components:{
+			mycircle,
+			suggest
+		}
+	}
+</script>
+
+<style scoped>
+	.container {
+		/* padding: 20px; */
+		font-size: 14px;
+		line-height: 24px;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	page{
+		background-color: #EEEEEE;
+		width: 100%;
+		min-height:100%;
+		display:flex;
+	}
+	.swiper_group{
+		flex: 1;
+		/* height: ; */
+	}
+	.content{
+		margin-top: 20rpx;
+		background-color: #FFFFFF;
+		padding: 20rpx;
+	}
+	
+	.nav{
+		display: flex;
+		flex-direction: row;
+		border-bottom:1px solid #D2D2D2;
+		padding-bottom: 20rpx;
+	}
+	.nav_item{
+		margin-right: 30rpx;
+		color: #333333;
+		font-size: 32rpx;
+	}
+	.nav_item.active{
+		color: #FF484D;
+	}
+</style>
