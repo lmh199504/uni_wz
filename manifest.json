@@ -42,69 +42,69 @@
             },
             "splashscreen" : {
                 "android" : {
-                    "hdpi" : "static/fen.png",
-                    "xhdpi" : "static/fen.png",
-                    "xxhdpi" : "static/fen.png"
+                    "hdpi" : "static/init.png",
+                    "xhdpi" : "static/init.png",
+                    "xxhdpi" : "static/init.png"
                 },
                 "ios" : {
                     "iphone" : {
-                        "portrait-896h@3x" : "static/fen.png",
-                        "landscape-896h@3x" : "static/fen.png",
-                        "portrait-896h@2x" : "static/fen.png",
-                        "landscape-896h@2x" : "static/fen.png",
-                        "iphonex" : "static/fen.png",
-                        "iphonexl" : "static/fen.png",
-                        "retina55" : "static/fen.png",
-                        "retina55l" : "static/fen.png",
-                        "retina47" : "static/fen.png",
-                        "retina47l" : "static/fen.png",
-                        "retina40" : "static/fen.png",
-                        "retina40l" : "static/fen.png",
-                        "retina35" : "static/fen.png"
+                        "portrait-896h@3x" : "static/init.png",
+                        "landscape-896h@3x" : "static/init.png",
+                        "portrait-896h@2x" : "static/init.png",
+                        "landscape-896h@2x" : "static/init.png",
+                        "iphonex" : "static/init.png",
+                        "iphonexl" : "static/init.png",
+                        "retina55" : "static/init.png",
+                        "retina55l" : "static/init.png",
+                        "retina47" : "static/init.png",
+                        "retina47l" : "static/init.png",
+                        "retina40" : "static/init.png",
+                        "retina40l" : "static/init.png",
+                        "retina35" : "static/init.png"
                     },
                     "ipad" : {
-                        "portrait-1366h@2x" : "static/fen.png",
-                        "landscape-1366h@2x" : "static/fen.png",
+                        "portrait-1366h@2x" : "static/init.png",
+                        "landscape-1366h@2x" : "static/init.png",
                         "portrait-1194h@2" : "static/fen.png",
-                        "portrait-1112h@2x" : "static/fen.png",
-                        "landscape-1194h@2x" : "static/fen.png",
-                        "landscape-1112h@2x" : "static/fen.png",
-                        "portrait-retina7" : "static/fen.png",
-                        "landscape-retina7" : "static/fen.png",
-                        "portrait7" : "static/fen.png",
-                        "landscape7" : "static/fen.png"
+                        "portrait-1112h@2x" : "static/init.png",
+                        "landscape-1194h@2x" : "static/init.png",
+                        "landscape-1112h@2x" : "static/init.png",
+                        "portrait-retina7" : "static/init.png",
+                        "landscape-retina7" : "static/init.png",
+                        "portrait7" : "static/init.png",
+                        "landscape7" : "static/init.png"
                     }
                 }
             },
             "icons" : {
                 "android" : {
-                    "hdpi" : "static/images/tabbar/video.png",
-                    "xhdpi" : "static/images/tabbar/video.png",
-                    "xxhdpi" : "static/images/tabbar/video.png",
-                    "xxxhdpi" : "static/images/tabbar/video.png"
+                    "hdpi" : "static/999.png",
+                    "xhdpi" : "static/999.png",
+                    "xxhdpi" : "static/999.png",
+                    "xxxhdpi" : "static/999.png"
                 },
                 "ios" : {
-                    "appstore" : "static/images/tabbar/video.png",
+                    "appstore" : "static/999.png",
                     "iphone" : {
-                        "app@2x" : "static/images/tabbar/video.png",
-                        "app@3x" : "static/images/tabbar/video.png",
-                        "spotlight@2x" : "static/images/tabbar/video.png",
-                        "spotlight@3x" : "static/images/tabbar/video.png",
-                        "settings@2x" : "static/images/tabbar/video.png",
-                        "settings@3x" : "static/images/tabbar/video.png",
-                        "notification@2x" : "static/images/tabbar/video.png",
-                        "notification@3x" : "static/images/tabbar/video.png"
+                        "app@2x" : "static/999.png",
+                        "app@3x" : "static/999.png",
+                        "spotlight@2x" : "static/999.png",
+                        "spotlight@3x" : "static/999.png",
+                        "settings@2x" : "static/999.png",
+                        "settings@3x" : "static/999.png",
+                        "notification@2x" : "static/999.png",
+                        "notification@3x" : "static/999.png"
                     },
                     "ipad" : {
-                        "app" : "static/images/tabbar/video.png",
-                        "app@2x" : "static/images/tabbar/video.png",
-                        "proapp@2x" : "static/images/tabbar/video.png",
-                        "spotlight" : "static/images/tabbar/video.png",
-                        "spotlight@2x" : "static/images/tabbar/video.png",
-                        "settings" : "static/images/tabbar/video.png",
-                        "settings@2x" : "static/images/tabbar/video.png",
-                        "notification" : "static/images/tabbar/video.png",
-                        "notification@2x" : "static/images/tabbar/video.png"
+                        "app" : "static/999.png",
+                        "app@2x" : "static/999.png",
+                        "proapp@2x" : "static/999.png",
+                        "spotlight" : "static/999.png",
+                        "spotlight@2x" : "static/999.png",
+                        "settings" : "static/999.png",
+                        "settings@2x" : "static/999.png",
+                        "notification" : "static/999.png",
+                        "notification@2x" : "static/999.png"
                     }
                 }
             }

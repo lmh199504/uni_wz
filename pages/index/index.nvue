@@ -15,13 +15,13 @@
 						<suggest :height="scrollHeight"></suggest>
 					</swiper-item>
 					<swiper-item>
-						<suggest></suggest>
+						<suggest :height="scrollHeight"></suggest>
 					</swiper-item>
 					<swiper-item>
-						<suggest></suggest>
+						<suggest :height="scrollHeight"></suggest>
 					</swiper-item>
 					<swiper-item>
-						<suggest></suggest>
+						<suggest :height="scrollHeight"></suggest>
 					</swiper-item>
 				</swiper>
 			</view>
@@ -89,19 +89,27 @@
 </script>
 
 <style scoped>
+	
+
+	
+	/* #ifndef APP-PLUS */
+	page{
+		background-color: #EEEEEE;
+		width: 100%;
+		display:flex;
+		min-height:100%;
+	}
+	/* #endif */
 	.container {
 		/* padding: 20px; */
 		font-size: 14px;
 		line-height: 24px;
 		flex: 1;
+		
+		/* #ifndef APP-PLUS */
 		display: flex;
+		/* #endif */
 		flex-direction: column;
-	}
-	page{
-		background-color: #EEEEEE;
-		width: 100%;
-		min-height:100%;
-		display:flex;
 	}
 	.swiper_group{
 		flex: 1;
@@ -114,9 +122,12 @@
 	}
 	
 	.nav{
+		/* #ifndef APP-PLUS */
 		display: flex;
-		flex-direction: row;
 		border-bottom:1px solid #D2D2D2;
+		/* #endif */
+		flex-direction: row;
+		
 		padding-bottom: 20rpx;
 	}
 	.nav_item{

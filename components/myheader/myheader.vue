@@ -86,13 +86,13 @@
 		height: 75rpx;
 		line-height: 100rpx;
 		display: flex;
-		flex-direction: unset;
+		flex-direction: row;
 	}
 	.mymoney .money{
 		height: 75rpx;
 		line-height: 70rpx;
 		display: flex;
-		flex-direction: unset;
+		flex-direction: row;
 	}
 	
 	.mk_top_item button{
@@ -109,7 +109,7 @@
 	.countdown{
 		text-align: center;
 		color: #FFFFFF;
-		background:rgba(0,0,0,0.5);
+		background-color:rgba(0,0,0,0.5);
 		height: 30rpx;
 		border-radius: 15rpx;
 		line-height: 30rpx;
