@@ -1,26 +1,26 @@
 <template>
 	<view class="mk_top">
 		<view class="mk_top_left">
-			<view class="mk_top_item head_img positionImg">
-				<image src="../../static/w-imgs/w-logo.png" alt=""></image>
+			<view class="mk_top_item head_img">
+				<image src="../../static/w-imgs/w-logo.png" alt="" class="head_img_image"></image>
 			</view>
 			<view class="mk_top_item mymoney">
-				<view class="gold"><image src="../../static/w-imgs/gold.png" mode=""></image><text>1000</text></view>
-				<view class="money"><image src="../../static/w-imgs/money.png" mode=""></image><text>1000</text></view>
+				<view class="gold"><image src="../../static/w-imgs/gold.png" mode="" class="gold_image"></image><text>1000</text></view>
+				<view class="money"><image src="../../static/w-imgs/money.png" mode="" class="money_image"></image><text>1000</text></view>
 			</view>
 			<view class="mk_top_item">
-				<button type="default">提现</button>
+				<button type="default" class="mk_top_item_button">提现</button>
 			</view>
 		</view>
 		<view class="mk_top_right">
-			<view class="mk_top_item positionImg">
-				<image src="../../static/w-imgs/lingdan.png" mode=""></image>
+			<view class="mk_top_item positionImg mk_top_item_r">
+				<image src="../../static/w-imgs/lingdan.png" mode="" class="positionImg_img"></image>
 			</view>
-			<view class="mk_top_item positionImg">
-				<image src="../../static/w-imgs/search.png" mode=""></image>
+			<view class="mk_top_item positionImg mk_top_item_r">
+				<image src="../../static/w-imgs/search.png" mode=""  class="positionImg_img"></image>
 			</view>
-			<view class="mk_top_item positionImg">
-				<image src="../../static/w-imgs/redpack.png" mode=""></image>
+			<view class="mk_top_item positionImg mk_top_item_r">
+				<image src="../../static/w-imgs/redpack.png" mode="" class="positionImg_img"></image>
 				<view class="countdown">00:20</view>
 			</view>
 		</view>
@@ -38,10 +38,12 @@
 		position: relative;
 	}
 	.mk_top_left,.mk_top_right{
+		/* #ifndef APP-PLUS */
 		display: flex;
+		/* #endif */
 		align-items: center;
 		height: 100%;
-		flex-direction: unset;
+		flex-direction: row;
 	
 	}
 	.mk_top_item{
@@ -55,12 +57,16 @@
 		right: 10rpx;
 		top: 0;
 	}
-	.mk_top_right .mk_top_item,.head_img{
+	.mk_top_item_r,.head_img{
 		width: 90rpx;
 		height: 90rpx;
 	}
 	
-	.positionImg image{
+	.head_img_image{
+		width: 100%;
+		height: 100%;
+	}
+	.positionImg_img{
 		width: 90rpx;
 		height: 90rpx;
 		border-radius: 45rpx;
@@ -70,32 +76,36 @@
 		transform: translate(-50%,-50%);
 	}
 	
-	.gold image{
+	.gold_image{
 		margin-top: 30rpx;
 		
 	}
-	.money image{
+	.money_image{
 		margin-top: 20rpx;
 	}
-	.gold image,.money image{
+	.gold_image,.money_image{
 		width: 30rpx;
 		height: 30rpx;
 		margin-right: 10rpx;
 	}
-	.mymoney .gold{
+	.gold{
 		height: 75rpx;
 		line-height: 100rpx;
+		/* #ifndef APP-PLUS */
 		display: flex;
+		/* #endif */
 		flex-direction: row;
 	}
-	.mymoney .money{
+	.money{
 		height: 75rpx;
 		line-height: 70rpx;
+		/* #ifndef APP-PLUS */
 		display: flex;
+		/* #endif */
 		flex-direction: row;
 	}
 	
-	.mk_top_item button{
+	.mk_top_item_button{
 		height: 40rpx;
 	/* 	width: 93rpx; */
 		line-height: 40rpx;

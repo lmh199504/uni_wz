@@ -1,7 +1,7 @@
 <template>
 	<view class="mycircle">
 		<cmdProgress type="circle" :percent="progress" stroke-color="#f60" :width="40"></cmdProgress>
-		<view class="money" :class="{'active':show}">
+		<view class="money" :class="{'money_active':show}">
 			+{{money}}
 		</view>
 	</view>
@@ -49,18 +49,24 @@
 		left: 50%;
 		transform: translate(-50%,-50%);
 		/* background-color: #FFFFFF; */
+		/* #ifndef APP-PLUS */
 		display: none;
+		/* #endif */
 		width: 30px;
 		height: 30px;
+		/* #ifndef APP-PLUS */
 		animation: fadeIn 0.4s ease;
+		/* #endif */
 		border-radius:50% ;
 		text-align: center;
 		line-height: 30px;
-		scale: 1;
+		transform: scale(1);
 		color: #f60;
 	}
-	.money.active{
+	.money_active{
+		/* #ifndef APP-PLUS */
 		display: block;
+		/* #endif */
 	}
 	.mycircle{
 		position: fixed;
@@ -70,11 +76,11 @@
 	@keyframes fadeIn{
 		from{
 			top:60%;
-			scale: 1;
+			transform: scale(1);
 		}
 		to{
 			top:40%;
-			scale: 0.7;
+			transform: scale(0.7);
 		}
 	}
 </style>

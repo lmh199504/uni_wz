@@ -23,14 +23,14 @@
 			<view class="item" v-for="item in 4" :key="item">
 				<view class="title">赵薇女儿，林心如女儿，杨幂女儿，网友：真的是没有对比就没有伤害</view>
 				<view class="three_imgs">
-					<view>
-						<image src="../../static/w-imgs/test.jpg" mode=""></image>
+					<view class="three_imgs_view">
+						<image src="../../static/w-imgs/test.jpg" mode="" class="three_imgs_view_img"></image>
 					</view>
-					<view>
-						<image src="../../static/w-imgs/test.jpg" mode=""></image>
+					<view class="three_imgs_view">
+						<image src="../../static/w-imgs/test.jpg" mode="" class="three_imgs_view_img"></image>
 					</view>
-					<view>
-						<image src="../../static/w-imgs/test.jpg" mode=""></image>
+					<view class="three_imgs_view">
+						<image src="../../static/w-imgs/test.jpg" mode="" class="three_imgs_view_img"></image>
 					</view>
 				</view>
 				<view class="item-footer">
@@ -78,17 +78,17 @@
 		justify-content: space-between;
 		margin-top: 10rpx;
 	}
-	.three_imgs view{
+	.three_imgs_view{
 		flex: 1;
 		margin-right: 20rpx;
 		border-radius: 10rpx;
 		overflow: hidden;
 		height: 150rpx;
 	}
-	.three_imgs view:last-child{
+	.three_imgs_view:last-child{
 		margin-right: 0rpx;
 	}
-	.three_imgs view image{
+	.three_imgs_view_img{
 		width: 100%;
 	}
 	.item-footer{

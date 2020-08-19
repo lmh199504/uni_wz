@@ -3,10 +3,10 @@
 		<myheader></myheader>
 		<view class="content">
 			<view class="nav">
-				<view class="nav_item" :class="{'active':index == 0}" @click="index = 0">推荐</view>
-				<view class="nav_item" :class="{'active':index == 1}" @click="index = 1">健康</view>
-				<view class="nav_item" :class="{'active':index == 2}" @click="index = 2">养生</view>
-				<view class="nav_item" :class="{'active':index == 3}" @click="index = 3">音乐</view>
+				<view class="nav_item" :class="{'nav_item_active':index == 0}" @click="index = 0">推荐</view>
+				<view class="nav_item" :class="{'nav_item_active':index == 1}" @click="index = 1">健康</view>
+				<view class="nav_item" :class="{'nav_item_active':index == 2}" @click="index = 2">养生</view>
+				<view class="nav_item" :class="{'nav_item_active':index == 3}" @click="index = 3">音乐</view>
 			</view>
 			
 			<view class="">
@@ -37,7 +37,6 @@
 	    mapGetters
 		
 	} from 'vuex'
-	import mycircle from '@/components/mycircle/mycircle.vue'
 	export default {
 		data() {
 			return {
@@ -82,7 +81,6 @@
 			...mapGetters(['progress'])
 		},
 		components:{
-			mycircle,
 			suggest
 		}
 	}
@@ -135,7 +133,8 @@
 		color: #333333;
 		font-size: 32rpx;
 	}
-	.nav_item.active{
+
+	.nav_item_active{
 		color: #FF484D;
 	}
 </style>
