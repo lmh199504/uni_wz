@@ -71,8 +71,9 @@
 		color: #333333;
 	}
 	.three_imgs{
-		/* #ifndef APP-PLUS */
 		display: flex;
+		/* #ifndef APP-PLUS */
+		
 		/* #endif */
 		flex-direction: row;
 		justify-content: space-between;

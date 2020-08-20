@@ -10,7 +10,14 @@
 			</view>
 			
 			<view class="">
-				<swiper :indicator-dots="false" :autoplay="false" :interval="3000" :duration="500" @change="swiperChange" :current="index" class="swiper_group" style="height: calc(100vh - 470rpx);">
+				<swiper :indicator-dots="false" 
+				:autoplay="false" 
+				:interval="3000" 
+				:duration="500" 
+				@change="swiperChange" 
+				:current="index" 
+				class="swiper_group" 
+				:style='{"height":height}'>
 					<swiper-item class="swiper-item2">
 						<suggest :height="scrollHeight"></suggest>
 					</swiper-item>
@@ -41,7 +48,8 @@
 		data() {
 			return {
 				index:0,
-				scrollHeight:150
+				scrollHeight:900,
+				height:""
 			}
 		},
 		onLoad() {
@@ -56,25 +64,37 @@
 			
 			clearInterval(this.inter)
 		},
-		mounted() {
+		async mounted() {
 		    let info = uni.createSelectorQuery().in(this).select('.swiper_group').boundingClientRect()
+			// console.log(info)
 		    info.exec(res => {
-		        this.scrollHeight = res[0].height
+				// console.log(res)
+		        // this.scrollHeight = res[0].height
+				
 		    })
+			
+			// console.log(this.getHeight(".nav"))
+			let navHeight =  await this.getHeight(".nav")
+			let mk_topHeight = await this.getHeight(".mk_top")
+			this.height = `calc(100vh - ${navHeight}px - ${mk_topHeight}px)`
+			console.log(this.height)
 		},
 
 		methods: {
 			swiperChange(e){
-				console.log(e)
 				this.index = e.detail.current
 			},
 			getHeight(element){
-				let height = 0
-				let el = uni.createSelectorQuery().in(this).select(element).boundingClientRect()
-				el.exec(res => {
-					height = res[0].height
+				return new Promise((resolve,reject) => {
+					let height = 0
+					let el = uni.createSelectorQuery().in(this).select(element).boundingClientRect()
+					el.exec(res => {
+						height = res[0].height
+						resolve(height)
+					})
 				})
-				return height
+				
+				// return height
 			}
 		},
 		computed:{
@@ -90,28 +110,22 @@
 	
 
 	
-	/* #ifndef APP-PLUS */
 	page{
 		background-color: #EEEEEE;
 		width: 100%;
 		display:flex;
 		min-height:100%;
 	}
-	/* #endif */
 	.container {
-		/* padding: 20px; */
 		font-size: 14px;
 		line-height: 24px;
 		flex: 1;
-		
-		/* #ifndef APP-PLUS */
 		display: flex;
-		/* #endif */
+
 		flex-direction: column;
 	}
 	.swiper_group{
 		flex: 1;
-		/* height: ; */
 	}
 	.content{
 		margin-top: 20rpx;
@@ -120,10 +134,8 @@
 	}
 	
 	.nav{
-		/* #ifndef APP-PLUS */
 		display: flex;
 		border-bottom:1px solid #D2D2D2;
-		/* #endif */
 		flex-direction: row;
 		
 		padding-bottom: 20rpx;
@@ -135,6 +147,6 @@
 	}
 
 	.nav_item_active{
-		color: #FF484D;
+		color: #FF484D!important;
 	}
 </style>
